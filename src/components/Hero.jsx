@@ -1,8 +1,9 @@
 import React from 'react'
 import click from '../assets/click.svg'
-import Buy from '../assets/Buy.svg'
 import token from '../assets/cion2.png'
 import line from '../assets/Group 1.svg'
+import { Buy } from 'thirdweb/bridge'
+import PMIK804 from '../pages/Heros'
 
 const Hero = () => {
   return (
@@ -27,7 +28,7 @@ const Hero = () => {
       <div className='relative p-5 md:p-0 md:min-w-[410px]'>
         <img className='absolute z-10 lg:top-1 w-[237px] h-[237px] left-[-100px] top-[-50px] aspect-square md:hidden lg:block xl:right-[308px] 2xl:right-[310px] xl:block' src={token} style={{ opacity: 1, transform: 'none' }} alt="" />
         <div className='pl-[100px]'>
-          <img className='' src={Buy} alt="" />
+          <PMIK804 />
         </div>
         <img className='absolute z-1 w-[337px] h-[237px] aspect-square right-[-168px] bottom-0 md:hidden xl:bottom-40 xl:left-[310px] 2xl:bottom-40 2xl:left-[300px] lg:block"' src={token} style={{ opacity: 1, transform: 'none' }} alt="" />
       </div>
