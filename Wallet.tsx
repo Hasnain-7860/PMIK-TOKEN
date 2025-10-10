@@ -1,6 +1,7 @@
 import { ConnectButton } from "thirdweb/react";
 import { createThirdwebClient } from "thirdweb";
 import { inAppWallet, createWallet } from "thirdweb/wallets";
+import { Wallet } from "thirdweb/wallets";
 
 const client = createThirdwebClient({
   clientId: "....",
