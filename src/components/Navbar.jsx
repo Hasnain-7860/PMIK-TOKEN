@@ -49,6 +49,7 @@ const Navbar = () => {
           </a>
         </div>
         <div>
+            
           <button className="bg-[#FE0002] text-white text-md px-4 py-2 rounded-full">
             Connect Wallet
           </button>
