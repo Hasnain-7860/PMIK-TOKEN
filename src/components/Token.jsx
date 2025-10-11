@@ -54,8 +54,8 @@ const Token = () => {
                 {item.icon}
               </div>
             </div>
-            <h3 className="text-lg font-semibold mb-4">{item.title}</h3>
-            <p className="[#B3B3B3] text-center font-lexend text-[16px] font-light px-10 leading-[26px]">{item.text}</p>
+            <h3 className="text-lg font-semibold mb-4 font-lexend ">{item.title}</h3>
+            <p className="text-[#B3B3B3] text-center font-lexend text-[16px] font-light px-10 leading-[26px]">{item.text}</p>
           </div>
         ))}
       </div>

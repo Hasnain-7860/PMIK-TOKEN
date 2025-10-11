@@ -5,7 +5,7 @@ import Wallet from "../../Wallet";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const Navbar = () => {
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLinkClick = (link) => {
@@ -15,7 +15,6 @@ const Navbar = () => {
 
   return (
     <div className="relative p-6 lg:p-14 lg:px-20">
-      {/* background dots */}
       <img
         className="absolute top-[-92px] left-0 w-full lg:w-[546.746px] lg:-top-[30px] h-[440px] z-0 pointer-events-none"
         src={bgdott}
@@ -23,7 +22,6 @@ const Navbar = () => {
       />
 
       <nav className="relative flex items-center justify-between p-4 py-1 rounded-full bg-[#032703] text-white h-[68px] z-10">
-        {/* Left: Hamburger (visible on mobile + tablet) */}
         <div
           className="z-20 cursor-pointer lg:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -31,17 +29,15 @@ const Navbar = () => {
           {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
         </div>
 
-        {/* Middle: Logo */}
+       
         <div className="flex-1 flex justify-center lg:justify-start">
           <img src={logo} alt="Logo" className="w-[130px]" />
         </div>
 
-        {/* Right: Wallet */}
         <div className="z-20">
           <Wallet />
         </div>
 
-        {/* Desktop links (only on large screens) */}
         <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center space-x-2">
           <a
             href="#"
@@ -81,7 +77,6 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile + Tablet Menu (show when hamburger open) */}
         {menuOpen && (
           <div className="absolute top-[72px] left-0 w-full bg-[#032703] text-white flex flex-col items-center py-6 space-y-4 rounded-2xl shadow-lg lg:hidden">
             <a

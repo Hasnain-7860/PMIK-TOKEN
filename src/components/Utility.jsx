@@ -39,7 +39,7 @@ const Utility = () => {
                 {featuress.map((item, index) => (
                     <div key={index} className=" gap-10 py-12 px-12 rounded-lg bg-[#021B02]  p-6 shadow-lg border border-[#262626] transition duration-300 transform hover:-translate-y-2 hover:shadow-xl">
                         <h3 className="text-[18px] font-semibold mb-2">{item.title}</h3>
-                        <p className="text-[16px] text-[#B3B3B3]">{item.text}</p>
+                        <p className="text-[16px] text-[#B3B3B3] font-lexend leading-[24px]">{item.text}</p>
                     </div>
                 ))}
             </div>
