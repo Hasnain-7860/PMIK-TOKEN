@@ -2,6 +2,8 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import What from './components/What'
+import Token from './components/Token'
+import Coin from './components/Coin'
 const App = () => {
   return (
     <>
@@ -9,6 +11,8 @@ const App = () => {
       <Navbar/> 
       <Hero/>
       <What/>
+      <Token/>
+      <Coin/>
       </div>
     </>
   )

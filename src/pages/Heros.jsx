@@ -7,8 +7,8 @@ import usa from "../assets/usa.svg";
 
 const PMIK804 = () => {
   return (
-    <div className="flex items-center justify-center">
-      <div className="bg-[#0f2611] text-white rounded-2xl p-6 w-[410px] h-[534px] sm:w-[400px] shadow-lg border border-[#022702] flex flex-col z-10">
+    <div className="flex items-center justify-center ">
+      <div className="bg-[#0f2611]   flex  p-3 md:p-6 max-w-[410px]    flex-col items-center gap-[20.66px] rounded-[8.264px]  border-[0.689px] text-white  relative z-10 border-white/10 ">
         
         {/* Top Section */}
         <div className="flex flex-col flex-grow justify-between">
