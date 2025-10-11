@@ -4,6 +4,8 @@ import Hero from './components/Hero'
 import What from './components/What'
 import Token from './components/Token'
 import Coin from './components/Coin'
+import Utility from './components/Utility'
+import Roadmap from './components/Roadmap'
 const App = () => {
   return (
     <>
@@ -13,6 +15,8 @@ const App = () => {
       <What/>
       <Token/>
       <Coin/>
+      <Utility/>
+      <Roadmap/>
       </div>
     </>
   )

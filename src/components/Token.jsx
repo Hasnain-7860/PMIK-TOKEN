@@ -40,7 +40,7 @@ const Token = () => {
   return (
     <div> 
         <div className='text-center py-10'>
-            <h1 className='text-[38px] font-semi'>Token <span className='text-[#FE0002]'>Features</span></h1>
+            <h1 className='text-[38px] font-semibold'>Token <span className='text-[#FE0002]'>Features</span></h1>
         </div>
        <div className=" px-4 md:px-16 py-16">  
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" >
