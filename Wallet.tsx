@@ -1,10 +1,9 @@
 import { ConnectButton } from "thirdweb/react";
 import { createThirdwebClient } from "thirdweb";
 import { inAppWallet, createWallet } from "thirdweb/wallets";
-import { Wallet } from "thirdweb/wallets";
 
 const client = createThirdwebClient({
-  clientId: "....",
+  clientId: import.meta.env.VITE_CLIENT_ID!,
 });
 
 const wallets = [
@@ -29,12 +28,16 @@ const wallets = [
   createWallet("io.metamask"),
 ];
 
-function Wallet() {
+function Wallet({title  }: {title?: string}) {
   return (
-    <ConnectButton
+   <ConnectButton
       client={client}
+      connectButton={{ label: title ? title : "Connect Wallet" }}
       connectModal={{ size: "compact" }}
       wallets={wallets}
     />
+
   );
+
 }
+export default Wallet;

@@ -5,7 +5,7 @@ import What from './components/What'
 const App = () => {
   return (
     <>
-    <div className='min-h-screen bg-black text-white font-Lexend'>
+    <div className='min-h-screen bg-[#001000] text-white font-Lexend'>
       <Navbar/> 
       <Hero/>
       <What/>

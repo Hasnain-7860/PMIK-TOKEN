@@ -2,4 +2,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.tw-connect-wallet {
+  font-family: 'Lexend', sans-serif;
+  background: red !important;
+  color: white !important;
+    border-radius: 9999px !important;
+}
  

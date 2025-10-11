@@ -8,7 +8,7 @@ import usa from "../assets/usa.svg";
 const PMIK804 = () => {
   return (
     <div className="flex items-center justify-center">
-      <div className="bg-[#0f2611] text-white rounded-2xl p-6 w-[410px] h-[534px] sm:w-[400px] shadow-lg border border-[#022702] flex flex-col">
+      <div className="bg-[#0f2611] text-white rounded-2xl p-6 w-[410px] h-[534px] sm:w-[400px] shadow-lg border border-[#022702] flex flex-col z-10">
         
         {/* Top Section */}
         <div className="flex flex-col flex-grow justify-between">
@@ -44,13 +44,13 @@ const PMIK804 = () => {
 
             {/* Network Buttons */}
             <div className="flex justify-center space-x-4 mb-8">
-              <button className="flex items-center gap-2 bg-red-600 hover:bg-red-700 px-4 py-2 rounded-xl text-sm font-medium">
-                <img src={Eth} alt="Ethereum" className="w-4 h-4" /> Ethereum
+              <button className="flex items-center text-center  gap-2 bg-red-600 hover:bg-red-700 px-6 py-2 rounded-xl text-sm font-medium">
+                <img  src={Eth} alt="Ethereum" className="w-4 h-4" /><p className=""> Ethereum</p>
               </button>
-              <button className="flex items-center gap-2 bg-white hover:bg-gray-100 px-4 py-2 rounded-xl text-sm font-medium text-black">
+              <button className="flex items-center gap-2 bg-white hover:bg-gray-100 px-6 py-2 rounded-xl text-sm font-medium text-black">
                 <img src={Polygon} alt="Polygon" className="w-4 h-4" /> Polygon
               </button>
-              <button className="flex items-center gap-2 bg-white hover:bg-gray-100 px-4 py-2 rounded-xl text-sm font-medium text-black">
+              <button className="flex items-center gap-2 bg-white hover:bg-gray-100 px-6 py-2 rounded-xl text-sm font-medium text-black">
                 <img src={BSC} alt="BSC" className="w-4 h-4" /> BSC
               </button>
             </div>
