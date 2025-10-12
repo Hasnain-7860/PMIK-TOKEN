@@ -49,7 +49,7 @@ const Navbar = () => {
             Home
           </a>
           <a
-            href="#"
+            href="#Token"
             onClick={() => handleLinkClick("careers")}
             className={`px-4 py-2 rounded-full ${
               active === "careers" ? "bg-[#1C3D1C]" : ""
@@ -58,7 +58,7 @@ const Navbar = () => {
             Careers
           </a>
           <a
-            href="#"
+            href="#About"
             onClick={() => handleLinkClick("about")}
             className={`px-4 py-2 rounded-full ${
               active === "about" ? "bg-[#1C3D1C]" : ""
@@ -67,7 +67,7 @@ const Navbar = () => {
             About
           </a>
           <a
-            href="#"
+            href="#Roadmap"
             onClick={() => handleLinkClick("security")}
             className={`px-4 py-2 rounded-full ${
               active === "security" ? "bg-[#1C3D1C]" : ""

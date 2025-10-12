@@ -38,7 +38,7 @@ const features = [
 
 const Token = () => {
   return (
-    <div> 
+    <div id='Token'> 
         <div className='text-center py-10'>
             <h1 className='text-[38px] font-semibold'>Token <span className='text-[#FE0002]'>Features</span></h1>
         </div>

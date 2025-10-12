@@ -37,7 +37,7 @@ const featuresss = [
 
 const Roadmap = () => {
   return (
-    <div className='px-4 md:px-16 lg:px-32'>
+    <div className='px-4 md:px-16 lg:px-32' id='Roadmap'>
         <div className='text-[38px] font-medium text-center py-20 font-laxend '>
             <h1 >Token <span className='text-[#FE0002]'>Roadmap</span></h1>
         </div>

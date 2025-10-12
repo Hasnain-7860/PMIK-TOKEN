@@ -19,29 +19,34 @@ const Footer = () => {
             href="#"
             className={`text-[16px] font-Lexend`}>Home</a>
           <a
-            href="#"
+            href="#Token"
             className={`text-[16px] font-Lexend`}>Careers</a>
           <a
-            href="#"
+            href="#About"
             className={`text-[16px] font-Lexend`}>About</a>
           <a
-            href="#"
+            href="#Roadmap"
             className={`text-[16px] font-Lexend`}>Security</a>
             </div>
         
         </div>
           <div className='border-t border-b  flex-col border-[#262626] my-4 py-10 w-full flex items-center justify-center gap-4 lg:flex-row'>
             <div className='flex items-center text-center gap-1'>
-              <img src={message} alt="Message Icon" />
-            <p className='text-[16px] font-Lexend'>hello@skillbirdge.com</p>
+              <a href="mailto:hello@skillbirdge.com" className='flex items-center text-center gap-1'>
+                <img src={message} alt="Message Icon" />
+                <p className='text-[16px] font-Lexend'>hello@skillbirdge.com</p>
+              </a>
             </div>
             <div className='flex items-center text-center gap-1'>
+              <a href="tel:+9191813232309" className='flex items-center text-center gap-1'>
               <img src={call} alt="Call Icon" />
-            <p className='text-[16px] font-Lexend'>+91 91813 23 2309</p>
+            <p className='text-[16px] font-Lexend'>+91 91813 23 2309</p></a>
             </div>
             <div className='flex items-center text-center gap-1'>
-              <img src={location} alt="Location Icon" />
-            <p className='text-[16px] font-Lexend'>Somewhere in the World</p>
+              <a href="https://www.google.com/maps/place/Somewhere+in+the+World" target='_blank' className='flex items-center text-center gap-1'>
+                <img src={location} alt="Location Icon" />
+                <p className='text-[16px] font-Lexend'>Somewhere in the World</p>
+              </a>
             </div>
           </div>
           <div className='w-full bg-[#001000] flex flex-col md:flex-row items-center justify-between px-6 sm:h-[68px] rounded-[34px]  py-[14px] sm:py-0 sm:rounded-[100px] border border-[#262626] gap-6 text-white text-sm '>
