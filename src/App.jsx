@@ -7,6 +7,7 @@ import Coin from './components/Coin'
 import Utility from './components/Utility'
 import Roadmap from './components/Roadmap'
 import Today from './components/Today'
+import Footer from './components/Footer'
 const App = () => {
   return (
     <>
@@ -19,6 +20,7 @@ const App = () => {
       <Utility/>
       <Roadmap/>
       <Today/>
+      <Footer/>
       </div>
     </>
   )
