@@ -8,21 +8,23 @@ import Utility from './components/Utility'
 import Roadmap from './components/Roadmap'
 import Today from './components/Today'
 import Footer from './components/Footer'
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
+import Dashboard from './Admin/Dashboard'
+
 const App = () => {
   return (
     <>
     <div className='min-h-screen bg-[#001000] text-white font-Lexend'>
-      <Navbar/> 
-      <Hero/>
-      <What/>
-      <Token/>
-      <Coin/>
-      <Utility/>
-      <Roadmap/>
-      <Today/>
-      <Footer/>
-      </div>
-    </>
+      <BrowserRouter>
+      
+        <Routes>
+          <Route path='/' element={<><Navbar/><Hero/><What/><Token/><Coin/> <Utility/><Roadmap/><Today/><Footer/></>} />
+          <Route path='/dashboard' element={<Dashboard />} />
+        </Routes> 
+     
+      </BrowserRouter>
+    </div>
+  </>
   )
 }
 
