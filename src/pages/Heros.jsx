@@ -10,12 +10,11 @@ const PMIK804 = () => {
     <div className="flex items-center justify-center ">
       <div className="bg-[#0f2611]   flex  p-3 md:p-6 max-w-[410px]    flex-col items-center gap-[20.66px] rounded-[8.264px]  border-[0.689px] text-white  relative z-10 border-white/10 ">
         
-        {/* Top Section */}
+        
         <div className="flex flex-col flex-grow justify-between">
           <div>
             <h2 className="text-center text-2xl font-bold mb-8">Buy PMIK804 Now</h2>
 
-            {/* Price Info */}
             <div className="flex justify-between text-sm mb-3">
               <p>
                 Current Price:{" "}
@@ -27,7 +26,7 @@ const PMIK804 = () => {
               </p>
             </div>
 
-            {/* Progress Bar */}
+           
             <div className="w-full bg-[#173a17] rounded-full h-2 mb-3">
               <div
                 className="bg-[#00ff87] h-2 rounded-full"
@@ -35,16 +34,16 @@ const PMIK804 = () => {
               ></div>
             </div>
 
-            {/* Raised Info */}
+           
             <p className="text-center text-sm mb-6 text-gray-300">
               Raised:{" "}
               <span className="font-semibold text-white">$769,119</span> /{" "}
               <span className="text-gray-400">$1,000,000</span>
             </p>
 
-            {/* Network Buttons */}
+           
             <div className="flex justify-center space-x-4 mb-8">
-              <button className="flex items-center text-center  gap-2 bg-red-600 hover:bg-red-700 px-6 py-2 rounded-xl text-sm font-medium">
+              <button className="flex items-center text-center  gap-2 bg-[#FE0002] hover:bg-red-700 px-6 py-2 rounded-xl text-sm font-medium">
                 <img  src={Eth} alt="Ethereum" className="w-4 h-4" /><p className=""> Ethereum</p>
               </button>
               <button className="flex items-center gap-2 bg-white hover:bg-gray-100 px-6 py-2 rounded-xl text-sm font-medium text-black">
@@ -57,9 +56,9 @@ const PMIK804 = () => {
 
             <p className="text-sm mb-3 font-semibold">Money Exchange</p>
 
-            {/* Currency Boxes */}
+            
             <div className="bg-[#143014] rounded-2xl border border-[#1f3d1e] grid grid-cols-2 overflow-hidden divide-x divide-[#1f3d1e] divide-y">
-              {/* INR Box */}
+              
               <div className="flex flex-col items-center justify-center py-6 px-2">
                 <div className="flex items-center mb-1 space-x-2">
                   <img src={image1} alt="India" className="w-5 h-5" />
@@ -67,9 +66,10 @@ const PMIK804 = () => {
                 </div>
                 <p className="text-xs text-gray-400">Indian Rupees</p>
                 <p className="text-lg mt-2 font-semibold">5,0000</p>
+                <input  type="text" />
               </div>
 
-              {/* USD Box */}
+              
               <div className="flex flex-col items-center justify-center py-6 px-2">
                 <div className="flex items-center mb-1 space-x-2">
                   <img src={usa} alt="USA" className="w-5 h-5" />
@@ -82,8 +82,8 @@ const PMIK804 = () => {
           </div>
         </div>
 
-        {/* Buy Button */}
-        <button className="bg-red-600 hover:bg-red-700 w-full py-3 mt-6 text-lg font-semibold hover:cursor-pointer rounded-full">
+        
+        <button className="bg-[#FE0002] hover:bg-red-700 transition duration-300 w-full py-3 mt-6 text-lg font-semibold hover:cursor-pointer rounded-full">
           Buy PMIK804
         </button>
       </div>

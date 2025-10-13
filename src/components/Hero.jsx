@@ -1,11 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import click from '../assets/click.svg'
 import token from '../assets/download.svg'
 import line from '../assets/Group 1.svg'
 import PMIK804 from '../pages/Heros'
-import Wallet from '../../Wallet'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Hero = () => {
+  const [Wallet, setWallet] = useState(false);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (Wallet) {
+      navigate("/dashboard");
+    } else {
+      alert("Please connect your wallet first!");
+    }
+  };
   return (
     <div className="flex flex-col md:px-3.5  lg:py-[20px] lg:pl-[40px] lg:pr-[10px] xl:py-[80px] xl:pl-[80px] xl:pr-[200px] w-full md:flex-row md:items-start justify-between xl:gap-[261px] lg:gap-[200px] overflow-hidden">
       <div className='flex flex-col gap-4 md:items-start items-center justify-center text-center md:text-start p-4  md:gap-[16px]  max-w-[500px] md:px-4 lg:p-0 xl:p-0 2xl:p-0 '>
@@ -21,10 +31,14 @@ const Hero = () => {
           </div>
           <p className='text-[#E4E4E7] font-lexend text-base text-[18px] font-light leading-[150%]'>PMIK804 is a meme-based decentralized cryptocurrency built on the Binance Smart Chain (BEP-20). It represents a symbol of support for Pakistan’s former Prime Minister, Imran Khan, and is powered by a community that stands for justice, freedom, and transparency.</p>
           <div className='mt-6 flex gap-4'>
-                                  <Wallet title="Buy PMIK804" />
+                <button
+      onClick={handleClick}
+      className="bg-[#FE0002] rounded-[32px] w-[133px] h-[40px] font-[500]"
+    >
+      Dashboard
+    </button>        
+                      </div> 
 
-                      </div>
-       
       </div>
       <div className='relative p-5 md:p-0 md:min-w-[410px] '>
         <img className='absolute z-1 lg:top-1 w-[237px] h-[237px] left-[-40px] top-[-50px] aspect-square md:hidden lg:block xl:right-[308px] 2xl:right-[310px] xl:block' src={token} style={{ opacity: 1, transform: 'none' }} alt="" />
