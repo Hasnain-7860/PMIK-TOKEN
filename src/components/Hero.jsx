@@ -4,13 +4,14 @@ import token from '../assets/download.svg'
 import line from '../assets/Group 1.svg'
 import PMIK804 from '../pages/Heros'
 import { Link, useNavigate } from 'react-router-dom'
+import { useActiveWalletConnectionStatus } from 'thirdweb/react'
 
 const Hero = () => {
-  const [Wallet, setWallet] = useState(false);
+  const status = useActiveWalletConnectionStatus();
   const navigate = useNavigate();
 
   const handleClick = () => {
-    if (Wallet) {
+    if (status==="connected") {
       navigate("/dashboard");
     } else {
       alert("Please connect your wallet first!");
