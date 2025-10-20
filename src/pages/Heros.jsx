@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Eth from "../assets/Ethereum.svg";
 import BSC from "../assets/BSC.svg";
 import Polygon from "../assets/Polygon.svg";
@@ -12,6 +12,21 @@ import Button from "../atom/button";
 
 const PMIK804 = () => {
     const isConnected = useActiveWalletConnectionStatus();
+    const [bnbValue, setBnbValue] = useState("");
+      const [pmikValue, setPmikValue] = useState("");
+
+     const handleBnbChange = (e) => {
+    const value = parseFloat(e.target.value) || "";
+    setBnbValue(value);
+    setPmikValue(Number((value * Number(currentPrice)).toFixed(2)));
+  };
+
+   const handlePmikChange = (e) => {
+    const value = parseFloat(e.target.value) || "";
+    setPmikValue(value);
+    setBnbValue(Number((value / Number(currentPrice)).toFixed(2)));
+  };
+  
 
 
   const ActiveBtn = () => {
@@ -87,9 +102,19 @@ const PMIK804 = () => {
                   <p className="font-semibold">INR</p>
                 </div>
                 <p className="text-xs text-gray-400">Indian Rupees</p>
-                <p className="text-lg mt-2 font-semibold">5,0000</p>
-                <input  type="text" />
+                <div className="flex flex-col  items-center gap-[6.887px] p-[13.773px] flex-[1_0_0] border-t border-white/10 mt-6   ">
+            <p className="font-lexend flex justify-center items-center gap-[6.887px] p-[10.66px_13.773px] flex-[1_0_0]">
+              <input
+                type="number"
+                value={bnbValue}
+                onChange={handleBnbChange}
+                className="bg-transparent border-none w-full outline-none text-white text-sm [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                placeholder="Enter BNB"
+              />
+            </p>
+          </div>
               </div>
+             
 
               
               <div className="flex flex-col items-center justify-center py-6 px-2">
@@ -98,7 +123,17 @@ const PMIK804 = () => {
                   <p className="font-semibold">USD</p>
                 </div>
                 <p className="text-xs text-gray-400">United States Dollar</p>
-                <p className="text-lg mt-2 font-semibold">12.00</p>
+                <div className="flex flex-col items-center gap-[6.887px] p-[13.773px] flex-[1_0_0]  border-t border-white/10 mt-6">
+            <p className="font-lexend flex justify-center items-center gap-[6.887px] p-[20.66px_13.773px] flex-[1_0_0]">
+              <input
+                type="number"
+                value={pmikValue}
+                onChange={handlePmikChange}
+                className="bg-transparent border-none w-full outline-none text-white text-sm [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                placeholder="Enter PMIK804"
+              />
+            </p>
+          </div>
               </div>
             </div>
           </div>
