@@ -4,8 +4,30 @@ import BSC from "../assets/BSC.svg";
 import Polygon from "../assets/Polygon.svg";
 import image1 from "../assets/Image.svg";
 import usa from "../assets/usa.svg";
+import { useActiveWalletConnectionStatus } from "thirdweb/react";
+import Wallet from "../../Wallet";
+import Button from "../atom/button";
+
+
 
 const PMIK804 = () => {
+    const isConnected = useActiveWalletConnectionStatus();
+
+
+  const ActiveBtn = () => {
+    if (isConnected === "connected") {
+      return (
+        <Button
+          className="w-full bg-[#FF0000] text-white text-[16px] cursor-pointer font-lexend font-[600] leading-[24px] rounded-full px-4 py-2 hover:bg-red-600 transition duration-300 ease-in-out"
+          onClick={() => buyTokenHandler(isReferral, referrerAddress)}
+          btnName="Buy PMIK804"
+        />
+      );
+    } else {
+      return <Wallet/>;
+    }
+  };
+  
   return (
     <div className="flex items-center justify-center ">
       <div className="bg-[#0f2611]   flex  p-3 md:p-6 max-w-[410px]    flex-col items-center gap-[20.66px] rounded-[8.264px]  border-[0.689px] text-white  relative z-10 border-white/10 ">
@@ -82,10 +104,10 @@ const PMIK804 = () => {
           </div>
         </div>
 
-        
-        <button className="bg-[#FE0002] hover:bg-red-700 transition duration-300 w-full py-3 mt-6 text-lg font-semibold hover:cursor-pointer rounded-full">
+        <ActiveBtn/>
+        {/* <button className="bg-[#FE0002] hover:bg-red-700 transition duration-300 w-full py-3 mt-6 text-lg font-semibold hover:cursor-pointer rounded-full">
           Buy PMIK804
-        </button>
+        </button> */}
       </div>
     </div>
   );
